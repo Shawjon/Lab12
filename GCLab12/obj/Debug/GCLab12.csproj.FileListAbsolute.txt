@@ -1,0 +1,7 @@
+C:\Users\jshaw2\source\repos\GCLab12\GCLab12\obj\Debug\GCLab12.csprojAssemblyReference.cache
+C:\Users\jshaw2\source\repos\GCLab12\GCLab12\obj\Debug\GCLab12.csproj.CoreCompileInputs.cache
+C:\Users\jshaw2\source\repos\GCLab12\GCLab12\bin\Debug\GCLab12.exe.config
+C:\Users\jshaw2\source\repos\GCLab12\GCLab12\bin\Debug\GCLab12.exe
+C:\Users\jshaw2\source\repos\GCLab12\GCLab12\bin\Debug\GCLab12.pdb
+C:\Users\jshaw2\source\repos\GCLab12\GCLab12\obj\Debug\GCLab12.exe
+C:\Users\jshaw2\source\repos\GCLab12\GCLab12\obj\Debug\GCLab12.pdb
