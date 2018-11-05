@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GCLab12
 {
-    interface People
+    public interface People
     {
         string ToString();
     }

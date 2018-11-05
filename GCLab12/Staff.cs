@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace GCLab12
 {
-    class Staff:Person,People
+    public class Staff:Person,People
     {
         #region Data
         private string School;
         private double Pay;
         #endregion
         #region Constructor
-        public Staff (string name, string address, string school, double pay):base (name, address)
+        public Staff (string firstName, string lastName, string address, string school, double pay):base (firstName,lastName, address)
         {
             Pay = pay;
             School = school;
@@ -44,7 +44,7 @@ namespace GCLab12
         }
         public override string ToString()
         {
-            return $"Staff[Person[{name}, {address}], {school}, {pay}]";
+            return $"Staff[Person[{firstName} {lastName}, {address}], {school}, {pay}]";
         }
         #endregion
     }

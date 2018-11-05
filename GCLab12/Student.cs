@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GCLab12
 {
-    class Student:Person,People
+    public class Student:Person,People,IComparable<Student>
     {
         #region Data
         private int Year;
@@ -14,7 +14,8 @@ namespace GCLab12
         private string Program;
         #endregion
         #region Constructor
-        public Student(string name, string address, int year, double fee, string program):base(name, address)
+        public Student() { }
+        public Student(string firstName, string lastName, string address, int year, double fee, string program):base(firstName,lastName, address)
         {
             Year = year;
             Fee = fee;
@@ -22,6 +23,30 @@ namespace GCLab12
         }
         #endregion
         #region Methods
+        public static void ToList(List<Student> list)
+        {
+            Student temp = MakeStudent();
+            list.Add(temp);
+        }
+        public static Student MakeStudent()
+        {
+            Console.Write("What is the student's first name: ");
+            string firstname = Validator.ValidateString();
+            Console.Write("What is the person's last name: ");
+            string lastname = Validator.ValidateString();
+            Console.Write("What is the person's address: ");
+            var address = Console.ReadLine();
+            Console.Write("What is the persons year: (number) ");
+            int year = Validator.ValidateInt();
+            Console.Write("What is the Fee for this student?");
+            double fee = Validator.ValidateDouble(); 
+            Console.Write("What is the program this student is in: ");
+            string program  = Validator.ValidateProgram();
+
+
+            Student temp = new Student(firstname,lastname,address,year,fee,program );
+            return temp;
+        }
         public int year
         {
             get
@@ -55,9 +80,19 @@ namespace GCLab12
                 Program = value;
             }
         }
+
+        public virtual int CompareTo(Student temp)
+        {
+            if (this.lastName == temp.lastName)
+            {
+                return this.firstName.CompareTo(temp.firstName);
+            }
+            return this.lastName.CompareTo(temp.lastName);
+        }
+
         public override string ToString()
         {
-            return $"Student[Person[{name}, {address}], {program}, {year}, {fee}]";
+            return $"Student: {lastName}, {firstName}. Their address is {address} program: {program} Year: {year} Fee: {fee}";
         }
         #endregion
     }

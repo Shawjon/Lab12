@@ -6,29 +6,48 @@ using System.Threading.Tasks;
 
 namespace GCLab12
 {
-    class Person:People
+    public class Person:People
     {
         #region Data
-        private string Name;
+        private string FirstName;
         private string Address;
+        private string LastName;
         #endregion
         #region Constructor
-        public Person (string name, string address)
+        public Person()
         {
-            Name = name;
+        }
+
+        public Person (string firstName,string lastName, string address)
+        {
+            FirstName = firstName;
+            LastName = lastName;
             Address = address;
         }
+
+
         #endregion
         #region Methods
-        public string name
+        public string firstName
         {
             set
             {
-                Name = value;
+                FirstName = value;
             }
             get
             {
-                return Name;
+                return FirstName;
+            }
+        }
+        public string lastName
+        {
+            set
+            {
+                LastName = value;
+            }
+            get
+            {
+                return LastName;
             }
         }
         public string address
@@ -45,7 +64,7 @@ namespace GCLab12
         public override string ToString()
         {
             
-            return $"Person[{name}, {address}]";
+            return $"Person[{firstName} {lastName}, {address}]";
         }
         #endregion
 
